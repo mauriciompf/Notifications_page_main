@@ -1,0 +1,41 @@
+@use "./colors" as *;
+
+.notification {
+  width: min(65ch, 100% - 2rem);
+  margin: 2rem auto;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__count {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+}
+
+.message {
+  margin-block-start: 2rem;
+
+  & > * {
+    margin-block-end: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    padding: 1rem;
+  }
+
+  &__avatar {
+    margin-inline-end: 0.8rem;
+    & > img {
+      max-width: 2.8125rem;
+    }
+  }
+
+  &__timestamp {
+    display: block;
+    padding-block-start: 0.2rem;
+  }
+}
