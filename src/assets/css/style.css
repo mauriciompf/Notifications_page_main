@@ -1,3 +1,58 @@
+.notification {
+  width: min(65ch, 100% - 2rem);
+  margin: 2rem auto;
+}
+.notification__header {
+  display: flex;
+  justify-content: space-between;
+}
+.notification__count {
+  display: inline-block;
+  padding: 0.5rem;
+}
 
+.message {
+  margin-block-start: 2rem;
+}
+.message > * {
+  margin-block-end: 1rem;
+}
+.message__item {
+  display: flex;
+  padding: 1rem;
+}
+.message__avatar {
+  margin-inline-end: 0.8rem;
+}
+.message__avatar > img {
+  max-width: 2.8125rem;
+}
+.message__timestamp {
+  display: block;
+  padding-block-start: 0.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  outline: transparent;
+  color: none;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+}
 
 /*# sourceMappingURL=style.css.map */
