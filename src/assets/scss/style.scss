@@ -1,0 +1,24 @@
+@use "../scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  outline: transparent;
+  color: none;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+}
