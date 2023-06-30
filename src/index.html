@@ -16,101 +16,96 @@
       <div class="notification">
         <div class="notification__header">
           <div class="notification__header-content">
-            <h2 class="notification__title">Notifications <span class="notification__count"> 3</span></h2>
+            <h2 class="notification__title">Notifications </h2>
+            <span data-number="count" class="notification__count"></span>
           </div>
           <button class="notification__mark-button" type="button">Mark all as read</button>
         </div>
         <div class="message">
-          <div class="message__item">
+          <div data-item="item" class="message__item">
             <div class="message__avatar">
               <img src="./assets/images/avatar-mark-webber.webp" alt="">
             </div>
             <div class="message__content">
               <p class="message__text">
-                <strong class="message__username">Mark Webber</strong> reacted to your recent post
-                <strong class="message__post">My first tournament today!</strong>
-                <strong>*</strong>
+                <strong class="message__username">Mark Webber</strong>
+                reacted to your recent post
+                <strong class="message__post"><a href="">My first tournament today!</a></strong>
               </p>
               <span class="message__timestamp">1m ago</span>
             </div>
           </div>
-          <div class="message__item">
+          <div data-item="item" class="message__item">
             <div class="message__avatar">
               <img src="./assets/images/avatar-angela-gray.webp" alt="">
             </div>
             <div class="message__content">
               <p class="message__text">
                 <strong class="message__username">Angela Gray</strong> followed you
-                <strong>*</strong>
               </p>
               <span class="message__timestamp">5m ago</span>
             </div>
           </div>
-          <div class="message__item">
+          <div data-item="item" class="message__item">
             <div class="message__avatar">
               <img src="./assets/images/avatar-jacob-thompson.webp" alt="">
             </div>
             <div class="message__content">
               <p class="message__text">
                 <strong class="message__username">Jacob Thompson</strong> has joined your group
-                <strong class="message__group">Chess Club</strong>
-                <strong>*</strong>
+                <strong class="message__group"><a href="#">Chess Club</a></strong>
               </p>
               <span class="message__timestamp">1 day ago</span>
             </div>
           </div>
-          <div class="message__item">
+          <div data-item="item" class="message__item">
             <div class="message__avatar">
               <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="">
             </div>
             <div class="message__content">
               <p class="message__text">
                 <strong class="message__username">Rizky Hasanuddin</strong> sent you a private message
-                <strong>*</strong>
               </p>
               <span class="message__timestamp">5 days ago</span>
-              <div class="message__private-message">
+              <button class="message__private-message">
                 <p> Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game. </p>
-              </div>
+              </button>
             </div>
           </div>
-          <div class="message__item">
+          <div data-item="item" class="message__item">
             <div class="message__avatar">
               <img src="./assets/images/avatar-kimberly-smith.webp" alt="">
             </div>
             <div class="message__content">
               <p class="message__text">
                 <strong class="message__username">Kimberly Smith</strong> commented on your picture
-                <strong>*</strong>
               </p>
               <span class="message__timestamp">1 week ago</span>
             </div>
+            <button class="message__image">
+                <img src="./assets/images/image-chess.webp" alt="">
+            </button>
           </div>
-          <div class="message__item">
+          <div data-item="item" class="message__item">
             <div class="message__avatar">
               <img src="./assets/images/avatar-nathan-peterson.webp" alt="">
             </div>
             <div class="message__content">
               <p class="message__text">
                 <strong class="message__username">Nathan Peterson</strong> reacted to your recent post
-                <strong class="message__post">5 end-game strategies to increase your win rate</strong>
-                <strong>*</strong>
+                <strong class="message__post"><a href="#">5 end-game strategies to increase your win rate</a></strong>
               </p>
               <span class="message__timestamp">2 weeks ago</span>
             </div>
-            <div class="message__image">
-              <img src="./assets/images/image-chess.webp" alt="">
-            </div>
           </div>
-          <div class="message__item">
+          <div data-item="item" class="message__item">
             <div class="message__avatar">
               <img src="./assets/images/avatar-anna-kim.webp" alt="">
             </div>
             <div class="message__content">
               <p class="message__text">
                 <strong class="message__username">Anna Kim</strong> left the group
-                <strong class="message__group">Chess Club</strong>
-                <strong>*</strong>
+                <strong class="message__group"><a href="#">Chess Club</a></strong>
               </p>
               <span class="message__timestamp">2 weeks ago</span>
             </div>
@@ -118,5 +113,6 @@
         </div>
       </div>
     </main>
+    <script type="module" src="./assets/js/app.js"></script>
   </body>
 </html>
