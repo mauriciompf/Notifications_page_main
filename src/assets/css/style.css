@@ -5,10 +5,14 @@
 .notification__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.notification__header-content {
+  display: flex;
+  gap: 0.5rem;
 }
 .notification__count {
-  display: inline-block;
-  padding: 0.5rem;
+  padding: 0.1rem 0.8rem;
 }
 
 .message {
@@ -27,9 +31,92 @@
 .message__avatar > img {
   max-width: 2.8125rem;
 }
+.message__text > span {
+  display: inline-block;
+  width: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-inline-start: 0.3rem;
+}
 .message__timestamp {
   display: block;
   padding-block-start: 0.2rem;
+}
+.message__private-message {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-block-start: 1rem;
+}
+
+.notification__title {
+  font-size: 1.25em;
+  color: hsl(224, 21%, 14%);
+}
+.notification__count {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(219, 85%, 26%);
+  border-radius: 0.5rem;
+  font-size: 1em;
+  font-weight: 800;
+}
+.notification__mark-button {
+  color: hsl(219, 12%, 42%);
+  transition: all ease 300ms;
+}
+.notification__mark-button:hover, .notification__mark-button:focus {
+  color: hsl(219, 85%, 26%);
+}
+
+.message__text {
+  color: hsl(219, 12%, 42%);
+  font-size: 0.84em;
+}
+.message__text > span {
+  background-color: hsl(1, 90%, 64%);
+}
+.message__text > span.show {
+  background-color: primary-red;
+}
+.message__username {
+  color: hsl(224, 21%, 14%);
+  cursor: pointer;
+}
+.message__username:hover, .message__username:focus {
+  color: hsl(219, 85%, 26%);
+}
+.message__post, .message__post > a {
+  color: hsl(219, 12%, 42%);
+  transition: all ease 300ms;
+}
+.message__post:hover, .message__post:focus, .message__post > a:hover, .message__post > a:focus {
+  color: hsl(219, 85%, 26%);
+}
+.message__image > img {
+  width: 2.5rem;
+}
+.message__image:focus, .message__image:hover {
+  outline: 2px solid hsl(219, 85%, 26%);
+}
+.message__group > a {
+  color: hsl(219, 85%, 26%);
+  transition: all ease 300ms;
+}
+.message__group > a:hover, .message__group > a:focus {
+  color: hsl(219, 85%, 26%);
+}
+.message__timestamp {
+  color: hsl(219, 14%, 63%);
+  font-size: 0.84em;
+}
+.message__private-message {
+  border: 1px solid hsl(211, 68%, 94%);
+  color: hsl(219, 12%, 42%);
+  font-size: 0.8em;
+  transition: 300ms all ease;
+  text-align: left;
+}
+.message__private-message:hover, .message__private-message:focus {
+  background-color: hsl(205, 33%, 90%);
 }
 
 * {
@@ -53,6 +140,10 @@ button {
 
 img {
   display: block;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
