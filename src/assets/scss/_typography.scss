@@ -1,0 +1,102 @@
+@use "./colors" as *;
+
+$fs-text: 0.84em;
+
+@mixin blue-color {
+  &:hover,
+  &:focus {
+    color: $primary-blue;
+  }
+}
+
+.notification {
+  &__title {
+    font-size: 1.25em;
+    color: $very-dark-blue;
+  }
+
+  &__count {
+    color: $white;
+    background-color: $primary-blue;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    font-weight: 800;
+  }
+
+  &__mark-button {
+    color: $dark-grayish-blue;
+    transition: all ease 300ms;
+    @include blue-color;
+  }
+}
+
+.message {
+  //   &__item {
+  //     background-color: $light-grayish-blue-1;
+  //   }
+
+  &__text {
+    color: $dark-grayish-blue;
+    font-size: $fs-text;
+
+    & > span {
+      background-color: $primary-red;
+    }
+
+    & > span.show {
+      background-color: primary-red;
+      //   background-color: $white;
+    }
+  }
+
+  &__username {
+    color: $very-dark-blue;
+    cursor: pointer;
+
+    @include blue-color;
+  }
+
+  &__post,
+  &__post > a {
+    color: $dark-grayish-blue;
+    transition: all ease 300ms;
+
+    @include blue-color;
+  }
+
+  &__image {
+    & > img {
+      width: 2.5rem;
+    }
+
+    &:focus,
+    &:hover {
+      outline: 2px solid $primary-blue;
+    }
+  }
+
+  &__group > a {
+    color: $primary-blue;
+    transition: all ease 300ms;
+
+    @include blue-color;
+  }
+
+  &__timestamp {
+    color: $grayish-blue;
+    font-size: $fs-text;
+  }
+
+  &__private-message {
+    border: 1px solid $light-grayish-blue-1;
+    color: $dark-grayish-blue;
+    font-size: 0.8em;
+    transition: 300ms all ease;
+    text-align: left;
+
+    &:hover,
+    &:focus {
+      background-color: $light-grayish-blue-2;
+    }
+  }
+}
