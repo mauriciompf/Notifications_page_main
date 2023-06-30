@@ -7,11 +7,16 @@
   &__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    &-content {
+      display: flex;
+      gap: 0.5rem;
+    }
   }
 
   &__count {
-    display: inline-block;
-    padding: 0.5rem;
+    padding: 0.1rem 0.8rem;
   }
 }
 
@@ -34,8 +39,22 @@
     }
   }
 
+  &__text > span {
+    display: inline-block;
+    width: 10px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-inline-start: 0.3rem;
+  }
+
   &__timestamp {
     display: block;
     padding-block-start: 0.2rem;
+  }
+
+  &__private-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-block-start: 1rem;
   }
 }
