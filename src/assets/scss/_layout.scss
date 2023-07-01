@@ -1,8 +1,12 @@
 @use "./colors" as *;
+@use "./midias-queries" as *;
 
 .notification {
   width: min(65ch, 100% - 2rem);
   margin: 2rem auto;
+  @include desktop {
+    padding: 2rem 2rem 0rem;
+  }
 
   &__header {
     display: flex;
@@ -39,11 +43,20 @@
     }
   }
 
+  &__item-with-img {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .message__with-img {
+    display: flex;
+    flex-direction: row;
+  }
+
   &__text > span {
     display: inline-block;
-    width: 10px;
+    width: 0.5rem;
     aspect-ratio: 1 / 1;
-    border-radius: 50%;
     margin-inline-start: 0.3rem;
   }
 
