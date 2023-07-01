@@ -1,6 +1,8 @@
 @use "./colors" as *;
+@use "./midias-queries" as *;
 
 $fs-text: 0.84em;
+$fs-text-md: 1.05em;
 
 @mixin blue-color {
   &:hover,
@@ -10,6 +12,9 @@ $fs-text: 0.84em;
 }
 
 .notification {
+  background-color: $white;
+  border-radius: 0.5rem;
+
   &__title {
     font-size: 1.25em;
     color: $very-dark-blue;
@@ -31,21 +36,22 @@ $fs-text: 0.84em;
 }
 
 .message {
-  //   &__item {
-  //     background-color: $light-grayish-blue-1;
-  //   }
+  &__item.active {
+    background-color: $very-light-grayish-blue;
+    border-radius: 0.5rem;
+  }
 
   &__text {
     color: $dark-grayish-blue;
     font-size: $fs-text;
 
-    & > span {
-      background-color: $primary-red;
+    @include desktop {
+      font-size: $fs-text-md;
     }
 
-    & > span.show {
-      background-color: primary-red;
-      //   background-color: $white;
+    & > .span {
+      background-color: $primary-red;
+      border-radius: 50%;
     }
   }
 
@@ -84,15 +90,23 @@ $fs-text: 0.84em;
 
   &__timestamp {
     color: $grayish-blue;
-    font-size: $fs-text;
+    font-size: calc($fs-text - 0.02em);
+
+    @include desktop {
+      font-size: calc($fs-text-md - 0.02em);
+    }
   }
 
   &__private-message {
-    border: 1px solid $light-grayish-blue-1;
+    border: 1px solid $light-grayish-blue-2;
     color: $dark-grayish-blue;
-    font-size: 0.8em;
+    font-size: calc($fs-text - 0.04em);
     transition: 300ms all ease;
     text-align: left;
+
+    @include desktop {
+      font-size: calc($fs-text-md - 0.04em);
+    }
 
     &:hover,
     &:focus {
