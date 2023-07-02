@@ -1,0 +1,116 @@
+@use "./colors" as *;
+@use "./midias-queries" as *;
+
+$fs-text: 0.84em;
+$fs-text-md: 1.05em;
+
+@mixin blue-color {
+  &:hover,
+  &:focus {
+    color: $primary-blue;
+  }
+}
+
+.notification {
+  background-color: $white;
+  border-radius: 0.5rem;
+
+  &__title {
+    font-size: 1.25em;
+    color: $very-dark-blue;
+  }
+
+  &__count {
+    color: $white;
+    background-color: $primary-blue;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    font-weight: 800;
+  }
+
+  &__mark-button {
+    color: $dark-grayish-blue;
+    transition: all ease 300ms;
+    @include blue-color;
+  }
+}
+
+.message {
+  &__item.active {
+    background-color: $very-light-grayish-blue;
+    border-radius: 0.5rem;
+  }
+
+  &__text {
+    color: $dark-grayish-blue;
+    font-size: $fs-text;
+
+    @include desktop {
+      font-size: $fs-text-md;
+    }
+
+    & > .span {
+      background-color: $primary-red;
+      border-radius: 50%;
+    }
+  }
+
+  &__username {
+    color: $very-dark-blue;
+    cursor: pointer;
+
+    @include blue-color;
+  }
+
+  &__post,
+  &__post > a {
+    color: $dark-grayish-blue;
+    transition: all ease 300ms;
+
+    @include blue-color;
+  }
+
+  &__image {
+    & > img {
+      width: 2.5rem;
+    }
+
+    &:focus,
+    &:hover {
+      outline: 2px solid $primary-blue;
+    }
+  }
+
+  &__group > a {
+    color: $primary-blue;
+    transition: all ease 300ms;
+
+    @include blue-color;
+  }
+
+  &__timestamp {
+    color: $grayish-blue;
+    font-size: calc($fs-text - 0.02em);
+
+    @include desktop {
+      font-size: calc($fs-text-md - 0.02em);
+    }
+  }
+
+  &__private-message {
+    border: 1px solid $light-grayish-blue-2;
+    color: $dark-grayish-blue;
+    font-size: calc($fs-text - 0.04em);
+    transition: 300ms all ease;
+    text-align: left;
+
+    @include desktop {
+      font-size: calc($fs-text-md - 0.04em);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $light-grayish-blue-2;
+    }
+  }
+}

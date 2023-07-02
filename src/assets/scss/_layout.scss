@@ -1,0 +1,73 @@
+@use "./colors" as *;
+@use "./midias-queries" as *;
+
+.notification {
+  width: min(65ch, 100% - 2rem);
+  margin: 2rem auto;
+  @include desktop {
+    padding: 2rem 2rem 0rem;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-content {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+
+  &__count {
+    padding: 0.1rem 0.8rem;
+  }
+}
+
+.message {
+  margin-block-start: 2rem;
+
+  & > * {
+    margin-block-end: 1rem;
+  }
+
+  &__item {
+    display: flex;
+    padding: 1rem;
+  }
+
+  &__avatar {
+    margin-inline-end: 0.8rem;
+    & > img {
+      max-width: 2.8125rem;
+    }
+  }
+
+  &__item-with-img {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .message__with-img {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text > span {
+    display: inline-block;
+    width: 0.5rem;
+    aspect-ratio: 1 / 1;
+    margin-inline-start: 0.3rem;
+  }
+
+  &__timestamp {
+    display: block;
+    padding-block-start: 0.2rem;
+  }
+
+  &__private-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-block-start: 1rem;
+  }
+}

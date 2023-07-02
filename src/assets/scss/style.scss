@@ -1,0 +1,34 @@
+@use "../scss" as *;
+@use "./colors" as *;
+@use "./midias-queries" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  @include desktop {
+    height: 100%;
+    background-color: $very-light-grayish-blue;
+  }
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  outline: transparent;
+  color: none;
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
